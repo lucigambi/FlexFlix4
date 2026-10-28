@@ -1,0 +1,146 @@
+/* Apertura institucional. Imagen y espacio para texto compuestos en el archivo PNG. */
+.learning{position:relative;isolation:isolate;overflow:hidden;min-height:100svh;display:flex;align-items:center;padding:140px clamp(32px,5vw,96px) 72px;background:#060b19}
+.learning-copy{position:relative;z-index:1;width: min(490px,38%)}
+.learning-copy .eyebrow{font-size:10px;letter-spacing:2px;color:#75ccec}
+.learning h1{font-size:clamp(48px,5.1vw,82px);line-height:1.03;letter-spacing:-3px;margin:0 0 24px}
+.learning h1 em{font-style:normal;background:none;color:#ff6500}
+@media(min-width:800px){.learning h1{margin-top:36px}}
+.learning-promise{font-size:clamp(21px,2vw,30px);font-weight:600;line-height:1.4;letter-spacing:-.5px;margin:0 0 20px}
+.learning-lead{max-width:430px;font-size:14px;line-height:1.8;color:#bbc6d8;margin:0 0 25px}
+.learning-pillars{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;width:560px;max-width:calc(100vw - 2 * clamp(32px,5vw,96px));padding:8px 0 0;margin:0 0 30px}
+.learning-pillars li{--pillar:#38bfff;position:relative;text-align:center;padding:22px 10px 20px;border:1px solid transparent;border-radius:20px;background:linear-gradient(145deg,#ffffff12,#ffffff03 55%),#0b16264d;-webkit-backdrop-filter:blur(16px) saturate(135%);backdrop-filter:blur(16px) saturate(135%);box-shadow:0 12px 30px #00000020;transition:transform .25s ease,box-shadow .25s ease}
+.learning-pillars li::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse at top left,color-mix(in srgb,var(--pillar) 22%,transparent),transparent 65%),radial-gradient(ellipse at top right,color-mix(in srgb,var(--pillar) 22%,transparent),transparent 65%);background-size:50% 58%;background-position:top left,top right;background-repeat:no-repeat}
+.learning-pillars li::before{content:"";position:absolute;top:-1px;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,var(--pillar),transparent);opacity:.7}
+.learning-pillars li > *{position:relative;z-index:1}
+@media(hover:hover) and (pointer:fine){.learning-pillars li:hover{transform:translateY(-4px);box-shadow:0 14px 34px #00000030,0 0 20px color-mix(in srgb,var(--pillar) 10%,transparent)}}
+@media(prefers-reduced-motion:reduce){.learning-pillars li{transition:none}.learning-pillars li:hover{transform:none}}
+.learning-pillars .pillar-decide{--pillar:#ff741f}.learning-pillars .pillar-act{--pillar:#36e6a5}.learning-pillars .pillar-create{--pillar:#d65aff}
+.pillar-icon{position:relative;display:grid;place-items:center;width:72px;height:72px;margin:0 auto 16px;border:1px solid var(--pillar);border-radius:50%;color:var(--pillar);background:radial-gradient(circle,color-mix(in srgb,var(--pillar) 16%,#071020) 0%,#071020 75%);box-shadow:0 0 22px color-mix(in srgb,var(--pillar) 20%,transparent),inset 0 0 14px color-mix(in srgb,var(--pillar) 12%,transparent)}
+.pillar-icon::after{content:"";position:absolute;inset:-5px;border:1px solid color-mix(in srgb,var(--pillar) 18%,transparent);border-radius:50%}
+.pillar-icon svg{width:44px;height:44px;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--pillar) 45%,transparent))}
+.pillar-understand svg path:last-child{animation:brain-signal 3.8s ease-in-out infinite}
+.compass-needle{transform-origin:24px 24px;animation:compass-seek 6s ease-in-out infinite}
+.pillar-act svg{animation:gear-turn 18s linear infinite;transform-origin:center}
+.pillar-create svg{animation:idea-glow 4.6s ease-in-out infinite}
+.bulb-rays{transform-origin:24px 19px;animation:idea-rays 4.6s ease-in-out infinite}
+.learning-pillars svg,.learning-pillars svg *{animation-play-state:var(--icon-play-state,running)}
+@keyframes brain-signal{0%,100%{opacity:.4;stroke:#38bfff}45%,60%{opacity:1;stroke:#d5f6ff}}
+@keyframes compass-seek{0%,100%{transform:rotate(-18deg)}30%{transform:rotate(24deg)}50%,75%{transform:rotate(0deg)}}
+@keyframes gear-turn{to{transform:rotate(360deg)}}
+@keyframes idea-glow{0%,100%{filter:drop-shadow(0 0 2px #d65aff55)}45%,60%{filter:drop-shadow(0 0 8px #d65affbb)}}
+@keyframes idea-rays{0%,100%{opacity:.35;transform:scale(.92)}45%,60%{opacity:1;transform:scale(1.04)}}
+.learning-pillars strong{display:block;color:var(--pillar);font-family:Barlow,Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;line-height:1.5}
+.learning-pillars p{margin:7px auto 0;color:#c3cede;font-size:12px;line-height:1.5;max-width:135px}
+@media(max-width:799px){.learning-pillars{width:100%;max-width:none}}
+@media(max-width:539px){.learning-pillars{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.learning-pillars p{max-width:160px}}
+.learning-button{background:#ff6500;color:#0a1020}.learning-button:hover{background:#ff8433}
+.learning-art{position:absolute;inset:0;z-index:0;margin:0;pointer-events:none}
+.learning-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:left center}
+/* Cuadraditos laterales de San Juan: tamanos fluidos, desenfoque y brillo. */
+.learning-pixels{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden;mask-image:linear-gradient(to bottom,#000 85%,transparent)}
+.learning-pixel{position:absolute;opacity:var(--op-a);animation:learning-flicker var(--dur) ease-in-out var(--delay) infinite;animation-play-state:var(--texture-play,running)}
+@keyframes learning-flicker{0%,100%{opacity:var(--op-a);transform:scale(1)}50%{opacity:var(--op-b);transform:scale(1.12)}}
+.learning-pixel:nth-child(4n){display:none}
+@media(max-width:1600px){.learning-pixel:nth-child(3n){display:none}}
+@media(max-width:1200px){.learning-pixel:nth-child(2n){display:none}}
+@media(max-width:799px){.learning-pixel{max-width:8px;max-height:8px}.learning-pixel:nth-child(5n){display:none}}
+.learning-foundations{max-width:1152px;margin:auto;padding:48px 0 50px;border-top:1px solid #ffffff12}
+.learning-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:35px}
+.learning-heading>div{max-width:640px}.learning-heading .eyebrow{margin-bottom:14px}
+.learning-heading h2{font-size:clamp(23px,2.3vw,30px);line-height:1.3;letter-spacing:-.8px}
+.learning-heading>p{color:var(--muted);font-size:12px;line-height:1.8;flex-shrink:0;margin:0}
+.capacity-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}
+.capacity{--capacity:#75ccec;padding:24px;background:#0c1424;border:1px solid #ffffff10;border-top:2px solid var(--capacity);border-radius:9px}
+.capacity-decide{--capacity:#ff6500}.capacity-act{--capacity:#6cb9e5}.capacity-create{--capacity:#b68bd0}
+.capacity svg{display:block;width:32px;height:32px;color:var(--capacity)}
+.capacity h3{color:var(--capacity);font-size:17px;margin:18px 0 9px}
+.capacity p{font-size:12px;color:#b5c0d3;line-height:1.8;margin:0}
+.learning-details{display:grid;gap:12px}.learning-details summary{line-height:1.6;gap:16px}
+.foundation-content{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:8px 24px 24px;border-top:1px solid #ffffff12}
+.foundation-content h3{font-size:15px;color:#d5ddef}.foundation-content p{font-size:13px;line-height:1.8;color:#a3afc6;margin:0}
+.foundation-values{grid-template-columns:1fr 1fr}
+.learning-next{display:flex;align-items:center;justify-content:space-between;gap:18px;color:#c0cbdd;font-size:12px;line-height:1.6;margin-top:30px;padding:16px 0;border-bottom:1px solid #ffffff12}
+.learning-next span{color:#ff6500;font-size:22px}.learning-next:hover{color:white}
+/* Conserva el aspecto del título aprobado al pasar de h1 a h2. */
+.product-title em{font-style:normal;background:linear-gradient(100deg,#60eaf2,#b69bff 75%);background-clip:text;color:transparent}
+@media(max-width:1240px){.learning-foundations{margin:0 44px}}
+@media(min-width:800px) and (max-width:1099px){.learning-copy{width:43%}.learning h1{font-size:48px}.learning{padding-top:120px}.learning-heading>p{flex-shrink:1}}
+@media(max-width:799px){
+ .learning{min-height:0;display:flex;flex-direction:column;align-items:stretch;padding:42px 0 0;gap:20px}
+ .learning-copy{width:auto;max-width:620px;margin:0;padding:0 24px}
+ .learning h1{font-size:clamp(46px,9vw,66px);letter-spacing:-2px}
+ .learning-promise{font-size:24px}.learning-lead{max-width:100%}
+ .learning-art{position:relative;inset:auto;width:100%;height:clamp(260px,65vw,480px)}
+ .learning-art img{object-fit:cover;object-position:right center}
+ .learning-foundations{margin:0 24px;padding:32px 0 36px}
+ .learning-heading{display:block}.learning-heading>p{margin-top:14px}
+ .capacity-grid{grid-template-columns:repeat(2,1fr);gap:12px}.capacity{padding:20px 16px}
+ .foundation-content,.foundation-values{grid-template-columns:1fr;gap:8px;padding:8px 20px 22px}
+}
+@media(max-width:359px){.capacity-grid{grid-template-columns:1fr}}
+
+/* Un fondo continuo por sección, desde la promesa hasta sus desplegables. */
+.chapter{position:relative;isolation:isolate;display:flow-root;background:#060b19}
+.chapter-backdrop{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.chapter-backdrop img{position:sticky;top:0;display:block;width:100%;height:100svh;object-fit:cover;object-position:left center}
+.chapter-learning .chapter-backdrop img{height:auto;object-fit:contain;-webkit-mask-image:linear-gradient(to bottom,#000 65%,#000e 75%,#0008 87%,transparent 100%);mask-image:linear-gradient(to bottom,#000 65%,#000e 75%,#0008 87%,transparent 100%)}
+.chapter-learning .learning-art img{-webkit-mask-image:linear-gradient(to bottom,#000 65%,transparent 100%);mask-image:linear-gradient(to bottom,#000 65%,transparent 100%)}
+.chapter-operator .chapter-backdrop img{object-position:right center}
+.chapter .learning{background:transparent}
+.chapter .chapter-details{position:relative;isolation:isolate;max-width:none;margin:0;padding:40px max(44px,calc((100% - 1152px)/2)) 56px;border:0;background:none}
+.chapter-details::before{content:"";position:absolute;inset:-90px 0 0;z-index:-1;pointer-events:none;background:linear-gradient(to bottom,transparent,#060b19bd 130px,#060b198c)}
+.chapter-details .capacity{background:#0c1424ed}
+.chapter-details .levels .level{background:#0c1424ed}
+.chapter-details details{background:#080f1feF;border-color:#ffffff24}
+.chapter-details .learning-heading>p,.chapter-details .journey-heading>p{color:#d1daea}
+.chapter-details h2{max-width:650px}
+.chapter-details .learning-next{margin-top:24px;border:0;color:#edf2fa}
+.chapter-operator{border-top:2px solid #75ccec40}
+@media(min-width:800px){
+ .chapter .learning-art,.chapter .product .art{display:none}
+ .chapter .learning,.chapter .product{min-height:100svh}
+}
+@media(max-width:799px){
+ .chapter-backdrop{opacity:.3}
+ .chapter-backdrop img{object-position:65% center}
+ .chapter .chapter-details{padding:32px 24px 40px;background:none}
+ .chapter-details::before{background:linear-gradient(to bottom,transparent,#060b194d 130px)}
+ .chapter .learning-art{margin-bottom:0}
+ .chapter .product{padding-bottom:24px}
+}
+
+/* El hero se compone con el alto disponible, no solo con el ancho. */
+@media(min-width:800px){
+ .brand.brand{padding-top:clamp(8px,2svh,24px);padding-bottom:0}
+ .brand-logo{height:clamp(88px,13svh,128px);width:auto;aspect-ratio:5/2}
+ .brand .brand-link .brand-tagline{top:calc(66.8% + 7px);font-size:clamp(10px,1.5svh,13px)}
+ .chapter .learning{height:100svh;min-height:100svh;padding-top:clamp(112px,17svh,164px);padding-bottom:clamp(18px,3svh,32px);align-items:center}
+ .learning-copy{width:min(490px,43%);transform:scale(var(--hero-fit,1));transform-origin:left center}
+ .learning h1{font-size:clamp(40px,min(5.1vw,7.4svh),82px);margin:0 0 clamp(12px,2svh,24px)}
+ .learning-promise{font-size:clamp(20px,min(2vw,3svh),30px);line-height:1.3;margin-bottom:clamp(10px,1.7svh,20px)}
+ .learning-lead{font-size:clamp(12px,1.65svh,14px);line-height:1.65;margin-bottom:clamp(12px,2svh,25px)}
+ .learning-pillars{gap:clamp(10px,1.4vw,18px);padding-top:4px;margin-bottom:clamp(14px,2svh,30px)}
+ .learning-pillars li{padding:clamp(12px,2svh,22px) 10px clamp(12px,1.8svh,20px)}
+ .pillar-icon{width:clamp(46px,7.5svh,72px);height:clamp(46px,7.5svh,72px);margin-bottom:clamp(10px,1.7svh,16px)}
+ .pillar-icon svg{width:62%;height:62%}
+ .learning-pillars p{font-size:clamp(11px,1.5svh,12px);line-height:1.4}
+ .learning-button{padding:clamp(10px,1.5svh,15px) 21px;font-size:12px}
+}
+
+@media(max-width:799px){
+ .brand.brand{padding-block:8px 0;border:0}
+ .brand-logo{height:88px;width:220px;max-width:none}
+ .brand .brand-link .brand-tagline{top:calc(66.8% + 7px);font-size:10px}
+ .chapter .learning{height:calc(100svh - var(--hero-header-height,96px));min-height:0;padding:16px 24px 20px;display:flex;justify-content:center;gap:0}
+ .learning-copy{flex:none;padding:0;width:100%;max-width:none;transform:scale(var(--hero-fit,1));transform-origin:left center}
+ .learning h1{font-size:clamp(36px,8vw,48px);margin:0 0 14px}
+ .learning-promise{font-size:20px;line-height:1.3;margin-bottom:12px}
+ .learning-lead{font-size:12px;line-height:1.6;margin-bottom:14px}
+ .learning-pillars{gap:12px;padding-top:4px;margin-bottom:16px}
+ .learning-pillars li{padding:12px 8px}
+ .pillar-icon{width:46px;height:46px;margin-bottom:10px}
+ .pillar-icon svg{width:62%;height:62%}
+ .learning-pillars p{font-size:11px;line-height:1.35;margin-top:4px}
+ .learning-button{padding:11px 18px;font-size:12px}
+ .chapter .learning-art{display:none}
+}

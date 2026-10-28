@@ -1,0 +1,78 @@
+/* Texto vivo sobre el fondo provisto, conservando la imagen completa. */
+/* Ambos fondos se funden con el mismo azul, sin afectar los textos. */
+.chapter-learning .chapter-backdrop{-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - clamp(100px,15vw,240px)),transparent 100%);mask-image:linear-gradient(to bottom,#000 calc(100% - clamp(100px,15vw,240px)),transparent 100%)}
+.datacenter{--dc-cyan:#38bfff;--dc-warm:#ff741f;background:#060b19;isolation:isolate}
+.datacenter-hero{position:relative;display:flex;align-items:center;min-height:56.28vw;padding:64px clamp(32px,5vw,96px);isolation:isolate}
+.datacenter-background{position:absolute;inset:0;width:100%;height:auto;z-index:-2;display:block;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 clamp(100px,15vw,240px));mask-image:linear-gradient(to bottom,transparent 0%,#000 clamp(100px,15vw,240px))}
+.datacenter-hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(0deg,#060b19,transparent 18%)}
+.datacenter-copy{width:48%;max-width:710px;padding-bottom:3vw}
+.datacenter .eyebrow{color:var(--dc-cyan);font-family:Barlow,Arial,sans-serif;font-size:clamp(10px,.85vw,13px);letter-spacing:2px;margin-bottom:24px}
+.datacenter h2{font-family:Barlow,Arial,sans-serif;font-size:clamp(34px,4.15vw,72px);font-weight:600;letter-spacing:-1.6px;line-height:1.06;text-wrap:balance}
+.datacenter h2 em{display:block;font-style:normal;color:var(--dc-cyan);margin-top:8px}
+.datacenter-lead{max-width:440px;margin:30px 0 0;padding-top:22px;position:relative;font-size:clamp(14px,1.25vw,19px);line-height:1.65;color:#d3dded;text-wrap:pretty}
+.datacenter-lead::before{content:"";position:absolute;top:0;left:0;width:58px;height:3px;background:var(--dc-cyan)}
+.datacenter-lead strong{color:var(--dc-cyan);font-weight:800}
+.datacenter-content{max-width:1248px;margin:0 auto;padding:0 48px 72px}
+.datacenter-comparison{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:20px 0 38px}
+.datacenter-column{--dc-accent:var(--dc-cyan);position:relative;padding:28px 32px;border:1px solid transparent;border-radius:20px;background:linear-gradient(145deg,#ffffff12,#ffffff03 55%),#0b16264d;-webkit-backdrop-filter:blur(16px) saturate(135%);backdrop-filter:blur(16px) saturate(135%);box-shadow:0 12px 30px #00000020;transition:transform .25s ease,box-shadow .25s ease}
+.datacenter-column::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(ellipse at top left,color-mix(in srgb,var(--dc-accent) 22%,transparent),transparent 65%),radial-gradient(ellipse at top right,color-mix(in srgb,var(--dc-accent) 22%,transparent),transparent 65%);background-size:50% 58%;background-position:top left,top right;background-repeat:no-repeat}
+.datacenter-column::before{content:"";position:absolute;top:-1px;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,var(--dc-accent),transparent);opacity:.7}
+.datacenter-column>*{position:relative;z-index:1}
+@media(hover:hover) and (pointer:fine){.datacenter-column:hover{transform:translateY(-4px);box-shadow:0 14px 34px #00000030,0 0 20px color-mix(in srgb,var(--dc-accent) 10%,transparent)}}
+@media(prefers-reduced-motion:reduce){.datacenter-column{transition:none}.datacenter-column:hover{transform:none}}
+.datacenter-human{--dc-accent:var(--dc-warm)}
+.datacenter-column h3{margin:0 0 20px;font:600 clamp(28px,2.6vw,38px)/1.1 Barlow,Arial,sans-serif;color:var(--dc-accent)}
+.datacenter-column h3>span{display:block;color:#e3e9f4;font-size:13px;line-height:1.5;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
+.datacenter-column ul{list-style:none;padding:0;margin:0}
+.datacenter-column li{display:flex;align-items:center;gap:18px;min-height:58px;border-bottom:1px solid #ffffff0d;font-family:Barlow,Arial,sans-serif;font-size:20px}
+.datacenter-column li:last-child{border:0}
+.datacenter-column svg{width:30px;height:30px;flex:none;fill:none;stroke:var(--dc-accent);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.datacenter-outcomes{list-style:none;margin:0;padding:32px 0 0;border-top:1px solid #38bfff30;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;font-family:Barlow,Arial,sans-serif}
+.datacenter-outcomes li+li{border-left:1px solid #ffffff20}
+.datacenter-outcomes span{display:block;font-size:17px;color:#d5dfec;margin-bottom:4px}
+.datacenter-outcomes strong{font-size:clamp(22px,2.1vw,30px);font-weight:600;color:var(--dc-cyan)}
+@media(min-width:1800px){.datacenter-copy{margin-left:max(0px,calc((100vw - 1800px)/2))}}
+@media(max-width:1000px) and (min-width:700px){.datacenter-hero{padding-top:36px;padding-bottom:48px}.datacenter-copy{width:49%}.datacenter h2{font-size:clamp(30px,4.15vw,42px)}.datacenter .eyebrow{margin-bottom:16px}.datacenter-lead{font-size:13px;margin-top:20px;padding-top:16px}.datacenter-comparison{gap:24px}}
+@media(max-width:699px){
+ .datacenter-hero{display:flex;flex-direction:column;padding:38px 0 0;min-height:0}
+ .datacenter-copy{order:-1;width:100%;max-width:none;padding:0 24px 26px}
+ .datacenter h2{font-size:clamp(34px,8.2vw,54px);max-width:540px;letter-spacing:-1px}
+ .datacenter .eyebrow{font-size:10px;margin-bottom:18px}
+ .datacenter-lead{font-size:15px;max-width:500px;margin-top:24px}
+ .datacenter-background{position:relative;inset:auto;width:100%;height:auto;z-index:0;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 22%);mask-image:linear-gradient(to bottom,transparent,#000 22%)}
+ .datacenter-hero::after{inset:auto 0 0;height:24vw;z-index:1;background:linear-gradient(0deg,#060b19,transparent)}
+ .datacenter-content{padding:0 24px 48px}
+ .datacenter-comparison{gap:14px;padding:12px 0 28px}
+ .datacenter-column{padding:18px 12px;border-radius:12px}
+ .datacenter-column h3{font-size:27px;min-height:74px;margin-bottom:8px}
+ .datacenter-column h3>span{font-size:10px;letter-spacing:.5px}
+ .datacenter-column li{font-size:16px;gap:9px;min-height:54px}
+ .datacenter-column svg{width:24px;height:24px}
+ .datacenter-outcomes{gap:12px;padding-top:24px}
+ .datacenter-outcomes span{font-size:13px}.datacenter-outcomes strong{font-size:19px;line-height:1.15;display:block}
+}
+@media(max-width:359px){.datacenter-comparison{grid-template-columns:1fr}.datacenter-column h3{min-height:0}.datacenter-outcomes{grid-template-columns:1fr;gap:20px}.datacenter-outcomes li+li{border-left:0}}
+
+/* Una pantalla completa: contenido a la izquierda, escena libre a la derecha. */
+@media(min-width:800px){
+ .datacenter{position:relative;min-height:100svh;display:flex;align-items:center;padding:clamp(20px,4svh,44px) clamp(32px,5vw,96px);scroll-margin-top:-30px}
+ .datacenter-layout{width:53%;max-width:800px}
+ .datacenter-hero{display:contents}
+ .datacenter-background{height:100%;object-fit:cover;object-position:center;z-index:-2}
+ .datacenter-hero::after{inset:0;z-index:-1;background:linear-gradient(0deg,#060b19,transparent 14%),linear-gradient(90deg,#060b1940,transparent 65%)}
+ .datacenter-copy{width:100%;max-width:none;margin:0;padding:0}
+ .datacenter .eyebrow{font-size:clamp(9px,1.3svh,12px);margin-bottom:clamp(8px,1.5svh,16px)}
+ .datacenter h2{font-size:clamp(27px,min(3.2vw,5svh),56px);line-height:1.03;letter-spacing:-1px}
+ .datacenter h2 em{margin-top:5px}
+ .datacenter-lead{max-width:560px;font-size:clamp(12px,1.65svh,16px);line-height:1.45;margin-top:clamp(10px,1.8svh,20px);padding-top:clamp(10px,1.5svh,16px)}
+ .datacenter-content{max-width:none;margin:0;padding:0}
+ .datacenter-comparison{gap:clamp(14px,2vw,28px);padding:clamp(14px,2.5svh,28px) 0 clamp(12px,2svh,24px)}
+ .datacenter-column{padding:clamp(12px,1.8svh,22px) clamp(12px,1.5vw,24px)}
+ .datacenter-column h3{font-size:clamp(22px,3.2svh,34px);margin-bottom:clamp(6px,1svh,12px)}
+ .datacenter-column h3>span{font-size:clamp(9px,1.3svh,12px);letter-spacing:1px;margin-bottom:3px}
+ .datacenter-column li{min-height:clamp(27px,4.3svh,43px);font-size:clamp(13px,1.9svh,18px);gap:12px}
+ .datacenter-column svg{width:clamp(18px,2.8svh,27px);height:clamp(18px,2.8svh,27px)}
+ .datacenter-outcomes{gap:12px;padding-top:clamp(10px,1.8svh,20px)}
+ .datacenter-outcomes span{font-size:clamp(11px,1.65svh,16px);margin-bottom:3px}
+ .datacenter-outcomes strong{font-size:clamp(17px,2.5svh,25px)}
+}
