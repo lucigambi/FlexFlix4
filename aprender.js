@@ -80,6 +80,11 @@ document.querySelectorAll('.learning-pixels').forEach((texture) => {
   if (!copy) return;
   const desktop = matchMedia('(min-width:800px)');
   const fitHero = () => {
+    if (!desktop.matches) {
+      copy.style.removeProperty('--hero-fit');
+      hero.style.removeProperty('--hero-header-height');
+      return;
+    }
     hero.style.setProperty('--hero-header-height', `${desktop.matches ? 0 : document.querySelector('.brand').offsetHeight}px`);
     const style = getComputedStyle(hero);
     const available = hero.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);

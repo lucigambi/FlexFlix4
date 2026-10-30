@@ -9,3 +9,24 @@
 .environment-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:28px 0}.environment-cards .capacity{position:relative}.environment-cards .capacity:not(:last-child)::after{content:'\2192';position:absolute;right:-21px;top:30px;font-size:22px;color:#75ccec}.environment-cards .capacity:nth-child(1){--capacity:#b68bd0}.environment-cards .capacity:nth-child(2){--capacity:#75ccec}.environment-cards .capacity:nth-child(3){--capacity:#ff6500}.environment-comparison{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:8px 24px 24px;border-top:1px solid #ffffff12}.environment-comparison h3{color:#d9e2f3;font-size:15px}.environment-comparison p{font-size:13px;color:#b5c1d5;line-height:1.85;margin:0}
 @media(max-width:900px){.school-panel>header{padding:22px 18px 16px}.school-features{padding:0 18px;grid-template-rows:repeat(3,minmax(68px,auto))}.school-features li{font-size:10px;gap:7px;padding:8px}.school-features svg{width:22px;height:22px}.school-caption{padding:18px}.school-comparison{gap:20px}}
 @media(max-width:600px){.environment-layout{padding:48px 20px 0}.environment-heading h2{font-size:32px;letter-spacing:-1px}.environment-heading>p:last-child{font-size:13px}.school-comparison{gap:10px}.school-panel{border-radius:10px}.school-panel>header{padding:16px 10px;min-height:106px}.school-kicker{font-size:8px;letter-spacing:1px;min-height:25px}.school-panel h3{font-size:19px;letter-spacing:-.5px}.school-features{padding:0 8px;margin-bottom:12px;grid-template-columns:1fr;grid-template-rows:repeat(6,minmax(53px,auto));gap:5px}.school-features li{font-size:10px;gap:6px;padding:6px}.school-features svg{width:20px;height:20px}.school-tradicional .school-features li:last-child{grid-column:auto;justify-self:stretch;padding:6px}.school-scene{aspect-ratio:3/2}.school-scene img{object-position:50% center}.school-caption{font-size:11px;padding:14px 10px}.school-transition{top:65%;width:30px;height:30px;font-size:28px;padding-bottom:5px;box-shadow:none}.environment-message{gap:12px;align-items:flex-start}.environment-message p{font-size:13px}.environment-cards{grid-template-columns:1fr;gap:16px}.environment-cards .capacity:not(:last-child)::after{display:none}.environment-comparison{grid-template-columns:1fr;gap:10px;padding:8px 20px 24px}}
+
+/* Comparacion vertical: cada escuela dispone de todo el ancho. */
+@media(max-width:799px){
+ .environment-layout{padding:48px 24px 0}
+ .environment-heading{text-align:left;margin-bottom:28px}
+ .environment-heading h2{font-size:clamp(32px,6vw,44px)}
+ .environment-heading>p:last-child{font-size:16px}
+ .school-comparison{grid-template-columns:minmax(0,1fr);gap:20px}
+ .school-panel>header{padding:24px 20px 18px;min-height:0}
+ .school-kicker{font-size:11px;line-height:1.5;min-height:0}
+ .school-panel h3{font-size:28px}
+ .school-features{padding:0 20px;grid-template-columns:1fr;grid-template-rows:none;gap:10px;margin-bottom:24px}
+ .school-features li{font-size:15px;min-height:52px;padding:12px;gap:12px}
+ .school-features svg{width:26px;height:26px}
+ .school-tradicional .school-features li:last-child{grid-column:auto;justify-self:stretch;padding:12px}
+ .school-caption{font-size:15px;padding:20px}
+ .school-transition{position:static;justify-self:center;transform:rotate(90deg);width:44px;height:44px;font-size:36px;box-shadow:none;padding:0 0 5px}
+ .environment-message{align-items:flex-start;gap:12px}.environment-message p{font-size:15px}
+ .environment-cards,.environment-comparison{grid-template-columns:1fr;gap:20px}
+ .environment-cards .capacity:not(:last-child)::after{display:none}
+}

@@ -151,3 +151,29 @@
 @media(max-width:799px){.architecture-intro{display:block;margin-bottom:40px;max-width:none}.architecture-intro>.architecture-lead{margin-bottom:24px}.architecture-intro>.architecture-purpose{margin-top:24px}.architecture-popouts-layout{gap:12px;padding-inline:8px}.architecture-pop-number{font-size:52px}.architecture-pop-name{font-size:20px;max-width:42%;letter-spacing:-.5px}.architecture-pop-image{width:76px}}
 /* Nombre en gran formato, como marca de agua de la capa activa. */
 @media(min-width:1101px){.architecture-pop-name{width:auto;white-space:nowrap;overflow-wrap:normal;font-size:clamp(38px,3.9vw,64px);letter-spacing:-2px}.architecture-layer-shell.is-expanded .architecture-pop-name{opacity:.22}}
+
+/* Acordeon legible y facil de tocar, sin elementos fuera de pantalla. */
+@media(max-width:799px){
+ .architecture{padding:56px 24px 48px}
+ .architecture h2{font-size:clamp(34px,7vw,48px);letter-spacing:-1.2px;overflow-wrap:break-word}
+ .architecture-lead,.architecture-purpose>p:last-child{font-size:16px;line-height:1.7}
+ .architecture-benefits strong{font-size:16px}.architecture-benefits p{font-size:15px}
+ .architecture-stack-label{flex-wrap:wrap;font-size:11px;gap:8px}
+ .architecture-layer-title strong{font-size:16px;letter-spacing:0;overflow-wrap:anywhere}
+ .architecture-layer-title>span,.architecture-layer-title small{font-size:13px;line-height:1.5}
+ .architecture-layer summary{gap:10px;padding:18px 12px}
+ .architecture-layer-body{padding:20px 16px}
+ .architecture-layer-body p{font-size:15px;line-height:1.7}
+ .architecture-layer-body .architecture-development{font-size:14px}
+ .architecture-components ul{grid-template-columns:minmax(0,1fr)}
+ .architecture-component{padding:14px 12px}
+ .architecture-popouts-layout{display:grid;grid-template-columns:auto minmax(0,1fr) 64px;gap:10px;padding:16px 4px 8px}
+ .architecture-pop-name{max-width:none;min-width:0;font-size:22px;overflow-wrap:anywhere}
+ .architecture-pop-number{font-size:44px}.architecture-pop-image{width:64px}
+ .architecture-outcome{grid-template-columns:1fr;gap:24px}
+ .architecture-outcome p:last-child,.architecture-outcome li{font-size:15px}
+}
+@media(max-width:399px){
+ .architecture-badge{display:none}
+ .architecture-outcome ol{grid-template-columns:1fr}
+}
